@@ -7,7 +7,7 @@ import { DetailPage } from '../detail/detail';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  items: Array<{title: string, playlistUrl: string, imageUrl: string}>;
+  items: Array<{title: string, playlistId: string, imageUrl: string}>;
 
   constructor(public navCtrl: NavController) {
     var lessons = this.getLessons();
@@ -17,7 +17,7 @@ export class HomePage {
     lessons.forEach(lesson => {
       this.items.push({
         title: lesson.title,
-        playlistUrl: lesson.playlistUrl,
+        playlistId: lesson.playlistId,
         imageUrl: lesson.imageUrl
       });
     })
@@ -28,32 +28,32 @@ export class HomePage {
     return [
       {
         title: 'Learn To Fly',
-        playlistUrl: 'https://www.youtube.com/watch?v=5plnlyvdT5o&list=PLu_Jc10gF_fBKe-5_RLmaF7W097vyHDHe',
+        playlistId: 'PLhlTbW6V_soyCDqQoHQysYaGN-Hx_wz27',
         imageUrl: 'https://cdn.pixabay.com/photo/2016/05/05/02/32/balloon-1373161_1280.jpg'
       },
       {
         title: 'Alphabets',
-        playlistUrl: 'https://www.youtube.com/watch?v=V3ioRPuBcfw&list=PLwGjqS2iLnwV1lBfUo6VuWmMaWUJnxLMK',
+        playlistId: 'PLULEfTL61wpEolVATCVRxxGXQBsMbd27Q',
         imageUrl: 'https://cdn.pixabay.com/photo/2016/11/14/03/43/asia-1822520_1280.jpg'
       },
       {
         title: 'Sample Dialogues',
-        playlistUrl: 'https://www.youtube.com/watch?v=ulGp-rv5VnQ&list=PL0_U1EyXq3GBirxEV7zxryow5A8QuAcCP',
+        playlistId: 'PLDpDs736IBjoglmFatbFAhtofprWGK2oS',
         imageUrl: 'https://cdn.pixabay.com/photo/2018/04/09/11/20/alphabet-3303843_1280.jpg'
       },
       {
         title: 'Another Learn To Fly',
-        playlistUrl: 'https://www.youtube.com/watch?v=5plnlyvdT5o&list=PLu_Jc10gF_fBKe-5_RLmaF7W097vyHDHe',
+        playlistId: 'PLu_Jc10gF_fBKe-5_RLmaF7W097vyHDHe',
         imageUrl: 'https://cdn.pixabay.com/photo/2016/05/05/02/32/balloon-1373161_1280.jpg'
       },
       {
         title: 'Tone Drills',
-        playlistUrl: 'https://www.youtube.com/watch?v=V3ioRPuBcfw&list=PLwGjqS2iLnwV1lBfUo6VuWmMaWUJnxLMK',
+        playlistId: 'PLwGjqS2iLnwV1lBfUo6VuWmMaWUJnxLMK',
         imageUrl: 'https://cdn.pixabay.com/photo/2016/11/14/03/43/asia-1822520_1280.jpg'
       },
       {
         title: 'Immersion',
-        playlistUrl: 'https://www.youtube.com/watch?v=ulGp-rv5VnQ&list=PL0_U1EyXq3GBirxEV7zxryow5A8QuAcCP',
+        playlistId: 'PL0_U1EyXq3GBirxEV7zxryow5A8QuAcCP',
         imageUrl: 'https://cdn.pixabay.com/photo/2018/04/09/11/20/alphabet-3303843_1280.jpg'
       },
     ]
