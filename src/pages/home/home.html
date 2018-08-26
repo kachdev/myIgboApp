@@ -4,14 +4,32 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+  <div padding>
+    <h2>Welcome to Ionic!</h2>
+    <p>
+      This starter project comes with simple tabs-based layout for apps
+      that are going to primarily use a Tabbed UI.
+    </p>
+    <p>
+      Take a look at the <code>src/pages/</code> directory to add or change tabs,
+      update any existing page or create new pages.
+    </p>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-md-4 align-self-center *ngFor="let item of items">
+        <ion-card class="card-lesson">
+          <ion-card-content>
+            <div>
+              <ion-icon name="logo-youtube"></ion-icon>
+              <span>Category</span>
+            </div>
+            <ion-card-title>{{item.title}}</ion-card-title>
+            <p>3 videos - 20 mins <span float-right>Basic</span></p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -1,3 +1,15 @@
 page-home {
+  .card-lesson {
+    border-radius: 6px;
+    box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, .2);
+    border-radius: .375rem;
+    transition: all .3s ease;
+  }
 
+  @media(max-width: 767px) {
+    .card-lesson {
+        min-width: 280px;
+        margin-top: 0px !important;
+    }
+  }
 }
