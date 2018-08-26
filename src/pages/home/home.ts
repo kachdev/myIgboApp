@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { DetailPage } from '../detail/detail';
 
 @Component({
   selector: 'page-home',
@@ -56,5 +57,12 @@ export class HomePage {
         imageUrl: 'https://cdn.pixabay.com/photo/2018/04/09/11/20/alphabet-3303843_1280.jpg'
       },
     ]
+  }
+
+  itemTapped(event, item){
+    // We are moving to the detail page!
+    this.navCtrl.push(DetailPage, {
+      item: item
+    });
   }
 }

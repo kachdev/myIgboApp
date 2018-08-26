@@ -19,7 +19,7 @@
   <ion-grid>
     <ion-row>
       <ion-col col-md-4 align-self-center *ngFor="let item of items">
-        <ion-card class="card-lesson">
+        <ion-card class="card-lesson" (click)="itemTapped($event, item)">
           <ion-card-content>
             <div>
               <ion-icon name="logo-youtube"></ion-icon>
